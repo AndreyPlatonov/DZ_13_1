@@ -9,4 +9,13 @@ public class SimpleTask extends Task {
     public String getTitle() {
         return title;
     }
+
+    @Override
+    public boolean matches(String query) {
+        if (getTitle().contains(query)) {
+            return true;
+        }
+
+        return false;
+    }
 }
