@@ -28,8 +28,9 @@ public class TodosTest {
 
 
     }
+
     @Test
-    public void shouldSearchNotNull(){
+    public void shouldSearchNotNull() {
         SimpleTask simpleTask = new SimpleTask(5, "Купить хлеб");
 
         String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
@@ -48,15 +49,16 @@ public class TodosTest {
         todos.add(epic);
         todos.add(meeting);
 
-        String query="Хлеб";
+        String query = "Хлеб";
 
-        Task[] actual=todos.search(query);
-        Task[] expected={epic, meeting};
-        Assertions.assertArrayEquals(expected,actual);
+        Task[] actual = todos.search(query);
+        Task[] expected = {epic, meeting};
+        Assertions.assertArrayEquals(expected, actual);
 
     }
+
     @Test
-    public void shouldSearchNull(){
+    public void shouldSearchNull() {
         SimpleTask simpleTask = new SimpleTask(5, "Купить Хлеб");
 
         String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
@@ -75,11 +77,11 @@ public class TodosTest {
         todos.add(epic);
         todos.add(meeting);
 
-        String query="хлеб";
+        String query = "хлеб";
 
-        Task[] actual=todos.search(query);
-        Task[] expected={};
-        Assertions.assertArrayEquals(expected,actual);
+        Task[] actual = todos.search(query);
+        Task[] expected = {};
+        Assertions.assertArrayEquals(expected, actual);
 
     }
 }

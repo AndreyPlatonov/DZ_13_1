@@ -35,6 +35,7 @@ public class Task {
      * @return Ответ на вопрос, подходит ли эта задача под поисковый запрос
      */
     public boolean matches(String query) {
+
         return false;
     }
 }
